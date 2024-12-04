@@ -21,14 +21,33 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="decryptionGroupPackage\decryptionGroup.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="decryptionGroupPackage\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="decryptionMoviePackage\decryptionMovie.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="decryptionMoviePackage\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="mainPackage\main.py" />
     <Compile Include="mainPackage\__init__.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="decryptionGroupPackage\" />
+    <Folder Include="decryptionMoviePackage\" />
     <Folder Include="mainPackage\" />
     <Folder Include="data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\EncryptedGroupHints Fall 2024 Section 001.json" />
+    <Content Include="data\TeamsAndEncryptedMessagesForDistribution.json" />
+    <Content Include="data\UCEnglish.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
