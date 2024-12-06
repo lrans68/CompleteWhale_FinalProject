@@ -13,7 +13,7 @@
 
 from decryptionGroupPackage.decryptionGroup import decrypt_location
 from decryptionMoviePackage.decryptionMovie import decrypt_movie
-
+from PIL import Image
 
 def main():
     # Decrypt the location
@@ -29,6 +29,15 @@ def main():
     decrypted_movie = decrypt_movie(encrypted_movie, key)
     print(f'CompleteWhale Decrypted Movie: {decrypted_movie}')
 
+    # Load and display the images
+    image1_path = 'data/Photo1.jpg'  # Replace with the actual file name
+    image2_path = 'data/Photo2.jpg'  # Replace with the actual file name
    
+    image1 = Image.open(image1_path)
+    image2 = Image.open(image2_path)
+   
+    image1.show()
+    image2.show()
+
 if __name__ == '__main__':
     main()

@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="data\EncryptedGroupHints Fall 2024 Section 001.json" />
+    <Content Include="data\Photo1.jpg" />
+    <Content Include="data\Photo2.jpg" />
     <Content Include="data\TeamsAndEncryptedMessagesForDistribution.json" />
     <Content Include="data\UCEnglish.txt" />
   </ItemGroup>
