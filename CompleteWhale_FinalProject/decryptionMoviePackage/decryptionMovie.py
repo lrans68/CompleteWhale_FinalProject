@@ -13,4 +13,10 @@
 # Anything else that's relevant: None
 
 
+from cryptography.fernet import Fernet
+
+def decrypt_movie(encrypted_movie, key):
+    fernet = Fernet(key)
+    decrypted_movie = fernet.decrypt(encrypted_movie.encode()).decode()
+    return decrypted_movie
 
