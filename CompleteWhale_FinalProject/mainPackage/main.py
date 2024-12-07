@@ -6,12 +6,10 @@
 # Due Date:  12/10/2024
 # Course #/Section: IS4010-001
 # Semester/Year: Fall 2024
-# Brief Description of the assignment: 
-
-# Brief Description of what this module does.
+# Brief Description of the assignment:
+# Brief Description of what this module does:
 # Citations: 
 # Anything else that's relevant: None
-
 
 from decryptionGroupPackage.decryptionGroup import decrypt_location
 from decryptionMoviePackage.decryptionMovie import decrypt_movie
@@ -31,16 +29,15 @@ def main():
     decrypted_movie = decrypt_movie(encrypted_movie, key)
     print(f'CompleteWhale Decrypted Movie: {decrypted_movie}')
 
-     # Load and display the images
+    # Load and display the images
     image1_path = 'data/Photo1.jpg'  # Replace with the actual file name
     image2_path = 'data/Photo2.jpg'  # Replace with the actual file name
-    
+   
     image1 = Image.open(image1_path)
     image2 = Image.open(image2_path)
-    
+   
     image1.show()
     image2.show()
 
-   
 if __name__ == '__main__':
     main()
