@@ -28,6 +28,7 @@ def main():
     key = "OYu19RxF9QJhFklueUCr4b4q8cgR5-1-qVJvLNXH9QA="  # Replace with actual Fernet key
     decrypted_movie = decrypt_movie(encrypted_movie, key)
     print(f'CompleteWhale Decrypted Movie: {decrypted_movie}')
+   
 
     # Load and display the images
     image1_path = 'data/Photo1.jpg'  # Replace with the actual file name
@@ -38,6 +39,7 @@ def main():
    
     image1.show()
     image2.show()
+
 
 if __name__ == '__main__':
     main()
