@@ -12,11 +12,21 @@
 # Citations: Microsoft Copiolt, https://cryptography.io/en/latest/fernet/ --> fernet key information, https://pypi.org/project/pillow/ --> image display, https://www.geeksforgeeks.org/fernet-symmetric-encryption-using-cryptography-module-in-python/ --> fernet key information, understanding how it works, 
 # Anything else that's relevant: None
 
-
+import json
 from cryptography.fernet import Fernet
 
-def decrypt_movie(encrypted_movie, key):
-    fernet = Fernet(key)
-    decrypted_movie = fernet.decrypt(encrypted_movie.encode()).decode()
-    return decrypted_movie
+def load_encrypted_data(file_path):
+    with open(file_path, 'r') as file:
+        return json.load(file)
 
+def get_encrypted_movie(encrypted_data, team_name):
+    # Ensure the team_name exists in the encrypted data
+    if team_name in encrypted_data:
+        return encrypted_data[team_name][0]  # Access the first element in the list
+    else:
+        raise KeyError(f"Team name '{team_name}' not found in the encrypted data.")
+
+def decrypt_movie_title(encrypted_title, key):
+    fernet = Fernet(key)
+    decrypted_title = fernet.decrypt(encrypted_title.encode()).decode()
+    return decrypted_title
